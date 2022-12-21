@@ -3,7 +3,7 @@
     "description": "admin framwork",
     "type": "library",
     "keywords": ["dcat", "laravel", "admin", "grid", "form", "laravel admin"],
-    "homepage": "https://github.com/jqhph/dcat-admin",
+    "homepage": "https://github.com/feicanfly/admin-framwork",
     "license": "MIT",
     "authors": [
         {
