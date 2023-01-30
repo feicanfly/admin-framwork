@@ -34,3 +34,9 @@
 
 
 </script>
+
+<script>
+    function submitform() {
+        $(".grid-filter-form").submit();
+    }
+</script>
