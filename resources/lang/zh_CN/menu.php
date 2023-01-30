@@ -10,7 +10,7 @@ return [
         'menu'          => '菜单',
         'operation_log' => '操作日志',
         'helpers'       => '开发工具',
-        'extensions'    => '扩展',
+        // 'extensions'    => '扩展',
         'scaffold'      => '代码生成器',
         'icons'         => '图标',
     ],
