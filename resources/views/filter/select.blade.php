@@ -11,6 +11,14 @@
     </select>
 </div>
 
+
+<script type="text/javascript">
+    function submitForm() {
+        $(".grid-filter-form").submit();
+    }
+</script>
+
+
 @include('admin::scripts.select')
 
 <script require="@select2?lang={{ config('app.locale') === 'en' ? '' : str_replace('_', '-', config('app.locale')) }}">
@@ -28,10 +36,5 @@
     $("{!! $selector !!}").select2(configs);
     @endif
 
-    function submitForm() {
-        $(".grid-filter-form").submit();
- 
-        //指定参数
-        //$("#pageSizeForm").submit({ url: "", type: "post", data: { id: id } });
-    }
+
 </script>
