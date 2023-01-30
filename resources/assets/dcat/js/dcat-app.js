@@ -125,9 +125,3 @@ function prepare(Dcat) {
 win.CreateDcat = function(config) {
     return prepare(new Dcat(config));
 };
-
-
-function submitformchange() {
-    console.log('9999')
-    $(".grid-filter-form").submit();
-}

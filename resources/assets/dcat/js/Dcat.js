@@ -2,10 +2,6 @@
 import Helpers from './extensions/Helpers'
 import Translator from './extensions/Translator'
 
-
-
-
-
 let $ = jQuery,
     $document = $(document),
     waiting = false,
