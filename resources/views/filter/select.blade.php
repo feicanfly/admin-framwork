@@ -1,3 +1,9 @@
+<script type="text/javascript">
+    function submitForm() {
+        $(".grid-filter-form").submit();
+    }
+</script>
+
 <div class="input-group input-group-sm">
     <div class="input-group-prepend">
         <span class="input-group-text bg-white text-capitalize"><b>{!! $label !!}</b></span>
@@ -10,6 +16,8 @@
         @endforeach
     </select>
 </div>
+
+
 
 
 
