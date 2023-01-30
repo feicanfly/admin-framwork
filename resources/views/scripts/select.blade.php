@@ -1,5 +1,10 @@
 <script>
 @section('admin.select-ajax')
+
+    function submitForm() {
+        $(".grid-filter-form").submit();
+    }
+    
     @if(isset($ajax))
         configs = $.extend(configs, {
         ajax: {

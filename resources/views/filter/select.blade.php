@@ -12,12 +12,6 @@
 </div>
 
 
-<script type="text/javascript">
-    function submitForm() {
-        $(".grid-filter-form").submit();
-    }
-</script>
-
 
 @include('admin::scripts.select')
 
