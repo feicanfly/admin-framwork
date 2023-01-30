@@ -3,7 +3,7 @@
         <span class="input-group-text bg-white text-capitalize"><b>{!! $label !!}</b></span>
     </div>
 
-    <select onchange="submitform();" class="form-control {{ $class }}" name="{{$name}}" data-value="{{ $value }}" style="width: 100%;">
+    <select onchange="document.getElementsByClassName('grid-filter-form').submit()" class="form-control {{ $class }}" name="{{$name}}" data-value="{{ $value }}" style="width: 100%;">
         <option value=""></option>
         @foreach($options as $select => $option)
             <option value="{{$select}}" {{ Dcat\Admin\Support\Helper::equal($select, $value) ?'selected':'' }}>{{$option}}</option>
@@ -31,12 +31,4 @@
     @else
     $("{!! $selector !!}").select2(configs);
     @endif
-
-
-</script>
-
-<script>
-    function submitform() {
-        $(".grid-filter-form").submit();
-    }
 </script>
