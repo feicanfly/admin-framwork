@@ -36,15 +36,3 @@
 
     console.log('3333')
 </script>
-
-<script>
-    console.log('1111')
-    if(typeof submitformchange !== "function"){
-        console.log('8888')
-        function submitformchange() {
-            console.log('9999')
-            $(".grid-filter-form").submit();
-        }
-    }
-    
-</script>
