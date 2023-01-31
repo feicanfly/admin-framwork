@@ -23,6 +23,7 @@ class UserController extends AdminController
         return Grid::make(Administrator::with(['roles']), function (Grid $grid) {
             $grid->column('id', 'ID')->sortable();
             $grid->column('username');
+            $grid->column('phone', '电话');
             $grid->column('name');
 
             if (config('admin.permission.enable')) {
@@ -71,6 +72,7 @@ class UserController extends AdminController
         return Show::make($id, Administrator::with(['roles']), function (Show $show) {
             $show->field('id');
             $show->field('username');
+            $show->field('phone', '电话');
             $show->field('name');
 
             $show->field('avatar', __('admin.avatar'))->image();
@@ -133,6 +135,9 @@ class UserController extends AdminController
                 ->required()
                 ->creationRules(['required', "unique:{$connection}.{$userTable}"])
                 ->updateRules(['required', "unique:{$connection}.{$userTable},username,$id"]);
+
+            $form->text('phone', '电话')->required();
+
             $form->text('name', trans('admin.name'))->required();
             $form->image('avatar', trans('admin.avatar'))->autoUpload();
 
