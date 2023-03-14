@@ -24,6 +24,9 @@ class RoleController extends AdminController
             $grid->column('slug')->label('primary');
             $grid->column('name');
 
+
+            $grid->column('description', '描述');
+
             $grid->column('created_at');
             $grid->column('updated_at')->sortable();
 
@@ -95,6 +98,10 @@ class RoleController extends AdminController
                 ->updateRules(['required', "unique:{$connection}.{$roleTable},slug,$id"]);
 
             $form->text('name', trans('admin.name'))->required();
+
+            $form->text('description', '描述');
+
+
 
             $form->tree('permissions')
                 ->nodes(function () {
